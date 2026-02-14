@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flappy Math Bee - Menu</title>
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body onclick="playMusicOnce()">
+  <!-- Background Video -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="source/vidbg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Logo and Menu -->
+  <div class="menu">
+    <img src="source/logo.png" alt="Game Logo" class="logo" />
+    <button onclick="startGame()">Play</button>
+    <button onclick="openShop()">Shop</button>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgmusic" src="source/bgmusic.mp3" loop></audio>
+
+  <script src="menu.js"></script>
+</body>
+</html> 

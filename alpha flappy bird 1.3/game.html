@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flappy Math Bee</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- BACKGROUND VIDEO --> 
+ <video id="bgVideo" autoplay muted loop playsinline> 
+  <source src="source/bggamecloud.mp4" type="video/mp4"> 
+</video>
+
+<audio id="bgmusic" src="source/bgmusic.mp3" loop></audio>
+
+
+
+  <!-- GAME CANVAS -->
+  <canvas id="gameCanvas"></canvas>
+
+  <div id="rotateOverlay">
+  <div>
+    <h1>🔄 Rotate your phone</h1>
+    <p>Please use <b>landscape mode</b> to play</p>
+  </div>
+</div>
+
+  <!-- GAME OVER UI -->
+  <div id="gameOverUI">
+    <div id="gameOverCard">
+      <h1>Game Over</h1>
+      <p id="finalScore">Score: 0</p>
+      <p id="finalCoins">Coins Earned: 0</p>
+
+      <button id="retryBtn">🔁 Retry</button>
+      <button id="homeBtn">🏠 Home</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

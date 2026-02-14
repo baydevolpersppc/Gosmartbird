@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flappy Math Bee - Shop</title>
+  <link rel="stylesheet" href="shop.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="source/vidbg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Shop Container -->
+  <div class="shop-container">
+    <h1>Shop</h1>
+    <p>Your Coins: <span id="coinCount" class="coin-count">0</span> 🪙</p>
+
+    <!-- Carousel Wrapper -->
+    <div class="carousel-wrapper">
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="shop-item" data-item="flappybird3">
+            <img src="source/flappybird3.png" alt="Default Flappy Bee">
+            <h3>Default Bird</h3>
+            <div class="tooltip">Your starting bird, always unlocked!</div>
+          </div>
+          <div class="shop-item" data-item="pink">
+            <img src="source/pinkbird.png" alt="Pink Bird">
+            <h3>Pink Bird Skin</h3>
+            <div class="tooltip">A cute pink bird skin!</div>
+            <button onclick="buyItem('pink',10)">Buy - 10 🪙</button>
+          </div>
+          <div class="shop-item" data-item="blue">
+            <img src="source/bluebird.png" alt="Blue Bird">
+            <h3>Blue Bird Skin</h3>
+            <div class="tooltip">Cool blue bird!</div>
+            <button onclick="buyItem('blue',12)">Buy - 12 🪙</button>
+          </div>
+          <div class="shop-item" data-item="zombie">
+            <img src="source/zombiebird.png" alt="Zombie Bird">
+            <h3>Zombie Bird Skin</h3>
+            <div class="tooltip">Spooky zombie bird!</div>
+            <button onclick="buyItem('zombie',15)">Buy - 15 🪙</button>
+          </div>
+          <div class="shop-item" data-item="lizard">
+            <img src="source/lizardbird.png" alt="Lizard Bird">
+            <h3>Lizard Bird Skin</h3>
+            <div class="tooltip">A reptilian twist!</div>
+            <button onclick="buyItem('lizard',18)">Buy - 18 🪙</button>
+          </div>
+          <div class="shop-item" data-item="einstein">
+            <img src="source/einsteinbird.png" alt="Einstein Bird">
+            <h3>Einstein Bird Skin</h3>
+            <div class="tooltip">Be the genius!</div>
+            <button onclick="buyItem('einstein',20)">Buy - 20 🪙</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <div class="carousel-controls">
+        <button onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+        <button onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <audio id="bgmusic" src="source/bgmusic.mp3" loop></audio>
+    <a href="index.html">⬅️ Back to Game</a>
+  </div>
+
+  <!-- Notification Popup -->
+  <div id="notification"></div>
+
+  <script src="shop.js"></script>
+</body>
+</html>
